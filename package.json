@@ -1,0 +1,22 @@
+{
+  "name": "flashcard",
+  "version": "0.0.1",
+  "description": "A flash card app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamolojede/flashcard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamolojede/flashcard/issues"
+  },
+  "homepage": "https://github.com/williamolojede/flashcard#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
