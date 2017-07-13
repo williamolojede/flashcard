@@ -1,0 +1,7 @@
+extends namecard.pug
+
+block namecard
+  form(action="/login", method="post").namecard-form
+    label.namecard-prompt Please Enter your name:
+      input(type="text", name="username").namecard-name
+    button(type="submit").namecard-submit Submit

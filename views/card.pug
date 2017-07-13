@@ -1,0 +1,25 @@
+extends namecard.pug
+
+block flashcard
+  section.flashcards
+    div(class=`card card-${type}`)
+      .card-header
+      h1.card-title= type
+      #content
+        h2= text
+        if hint 
+          p#hint
+            i Hint: #{hint}
+      .card-flip-wrap
+        a(href=`/cards/${id}?side=${link}`)
+          img(src="/static/img/flip.svg").card-flip
+      .card-next
+        a(href='/cards')
+          img(src="/static/img/next.svg")
+      //- h2= text
+//-     if hint 
+//-         p
+//-           i Hint: #{hint}
+//-       a(href=`/cards/${id}?side=${link}`)= link
+//-       br
+//-       a(href='/cards') next card
