@@ -7,6 +7,9 @@ const cardsRouter = require('./routes/cards');
 
 const app = express();
 
+// PORT
+const DEFAULT_PORT = 3000;
+app.set('port', process.env.PORT || DEFAULT_PORT)
 // BODY PARSER MIDDLEWARE
 app.use(bodyParser.urlencoded({ extended: false }));
 // COOKIE PARSER MIDDLEWARE
@@ -31,6 +34,6 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-app.listen(3000, () => {
-  console.log(`${process.env.npm_package_name} is running on http://localhost:3000/`);
+app.listen(app.get('port'), () => {
+  console.log(`${process.env.npm_package_name} is running on http://localhost:${app.get('port')}/`);
 });
